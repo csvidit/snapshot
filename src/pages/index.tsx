@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Title from "@/components/LandingPage/Title";
 import Subtitle from "@/components/LandingPage/Subtitle";
 import MoreInfo from "@/components/LandingPage/MoreInfo";
+import IllustrationAlpha from "@/components/LandingPage/IllustrationAlpha";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
       </Head>
       <div className={mainContainerStyles}>
         <div className={mainContentStyles}>
+          <IllustrationAlpha></IllustrationAlpha>
           <Title>SNAPSHOT</Title>
           <Subtitle>Your daily briefing</Subtitle>
           <MoreInfo link="true" href="https://github.com/csvidit/snapshot">From the world of Vidit Khandelwal</MoreInfo>
