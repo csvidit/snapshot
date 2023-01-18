@@ -4,6 +4,7 @@ import Title from "../LandingPage/Title";
 import { motion } from "framer-motion";
 import Button from "../LandingPage/Button";
 import Link from "next/link";
+import Nav from "./Nav";
 
 const HomePage = (props: any) => {
   const mainContainerStyles =
@@ -15,10 +16,7 @@ const HomePage = (props: any) => {
   return (
     <div className={mainContainerStyles}>
       <div className={mainContentStyles}>
-        <nav className="p-3 lg:p-5 flex flex-row justify-between border-b-2 border-b-stone-500 font-semibold text-xl">
-          <h1 className="text-amber-600 ">your snapshot</h1>
-          <Link className="text-stone-500 hover:text-sky-500" href="/api/auth/logout">logout</Link>
-        </nav>
+        <Nav></Nav>
       </div>
     </div>
   );
