@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/auth0-react": "github:auth0/auth0-react",
+    "@auth0/nextjs-auth0": "^2.1.0",
     "@next/font": "13.1.2",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -16,7 +18,9 @@
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "framer-motion": "^8.4.6",
+    "google-trends-api": "^4.9.2",
     "next": "13.1.2",
+    "node-vibrant": "^3.2.1-alpha.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.89",

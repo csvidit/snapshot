@@ -19,7 +19,7 @@ const Title = (props: {
         className="parallax-effect self-center"
         perspective={7500}
       >
-        <h1 className="text-amber-600 font-semibold text-8xl self-center">
+        <h1 className="text-amber-600 font-semibold text-7xl xl:text-8xl self-center">
           {props.children}
         </h1>
       </Tilt>
