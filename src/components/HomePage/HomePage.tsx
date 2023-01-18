@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Button from "../LandingPage/Button";
 import Link from "next/link";
 
-const HomePage = (props) => {
+const HomePage = (props: any) => {
   const mainContainerStyles =
     "w-screen h-screen flex flex-col space-y-6 justify-left " + styles.sg;
 
