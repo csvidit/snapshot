@@ -12,6 +12,7 @@ import MiniProfile from "@/components/LandingPage/MiniProfile";
 import LandingPage from "@/components/LandingPage/LandingPage";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import HomePage from "@/components/HomePage/HomePage";
+import Loading from "@/components/Loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function Home() {
 
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return (<Loading>Loading...</Loading>);
   if (error) return <div>{error.message}</div>;
 
   if(user)

@@ -17,6 +17,9 @@ const HomePage = (props: any) => {
     <div className={mainContainerStyles}>
       <div className={mainContentStyles}>
         <Nav></Nav>
+        <div className="flex flex-col lg:flex-row">
+
+        </div>
       </div>
     </div>
   );
