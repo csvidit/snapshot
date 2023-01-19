@@ -8,11 +8,11 @@ const Nav = () => {
   return (
     <nav className="pt-1 pb-1 pl-3 pr-3 flex flex-row justify-between border-b-2 border-b-slate-800 font-light">
       <div className="self-center">
-        <h1 className="text-amber-600 text-xl self-center">
-          <Link href="/">your snapshot</Link>
-        </h1>
+        <Link className="text-amber-600 text-xl self-center" href="/">
+          <p className="self-center">Your Snapshot</p>
+        </Link>
       </div>
-      <div className="self-center flex flex-row space-x-5 text-md">
+      <div className="self-center items-center text-md">
         <Nav2></Nav2>
       </div>
     </nav>
