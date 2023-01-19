@@ -9,7 +9,7 @@ const Nav = () => {
     <nav className="p-3 lg:p-5 flex flex-row justify-between border-b-2 border-b-stone-500 font-semibold">
       <div className="self-center">
         <h1 className="text-amber-600 text-2xl lg:text-3xl self-center">
-          your snapshot
+          <Link href="/">your snapshot</Link>
         </h1>
       </div>
       <div className="self-center flex flex-row space-x-5 text-md">

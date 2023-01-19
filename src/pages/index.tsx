@@ -1,14 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Title from "@/components/LandingPage/Title";
-import Subtitle from "@/components/LandingPage/Subtitle";
-import MoreInfo from "@/components/LandingPage/MoreInfo";
-import IllustrationAlpha from "@/components/LandingPage/IllustrationAlpha";
-import { animate, motion } from "framer-motion";
-import Button from "@/components/LandingPage/Button";
-import MiniProfile from "@/components/LandingPage/MiniProfile";
 import LandingPage from "@/components/LandingPage/LandingPage";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import HomePage from "@/components/HomePage/HomePage";
