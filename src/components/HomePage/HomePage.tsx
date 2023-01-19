@@ -11,7 +11,7 @@ const HomePage = (props: any) => {
     "w-screen h-screen flex flex-col space-y-6 justify-left"
 
   const mainContentStyles =
-    "w-full h-full flex flex-col bg-stone-200 dark:bg-stone-900 justify-left";
+    "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-left";
 
   return (
     <div className={mainContainerStyles}>

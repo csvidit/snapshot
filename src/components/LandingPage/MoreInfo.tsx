@@ -19,7 +19,7 @@ const MoreInfo = (props: {
       <React.Fragment>
         <Link
           href={props.href}
-          className="hover:text-sky-500 text-stone-500 self-center mt-10 text-xl"
+          className="hover:text-sky-500 text-slate-500 self-center mt-10 text-xl"
           target="_blank"
           rel="noreferrer"
         >

@@ -37,7 +37,7 @@ const Button = (props: {
   const linkLabelVariants = {
     animate: {
       width: 80,
-      color: "#78716c",
+      color: "#64748b",
     },
     hover: {
       color: "#0ea5e9",
@@ -53,14 +53,14 @@ const Button = (props: {
     return (
       <motion.div animate="animate" whileHover="hover">
         <motion.div
-          className="text-xl text-stone-500 flex flex-col justify-center items-center w-20 hover:w-28 hover:ease-in transition"
+          className="text-xl text-slate-500 flex flex-col justify-center items-center w-20 hover:w-28 hover:ease-in transition"
           variants={linkLabelVariants}
         >
           <Link href={props.href}>
             <p>{props.children}</p>
           </Link>
           <motion.div
-            className="w-20 border-t-2 border-stone-900 dark:border-stone-500"
+            className="w-20 border-t-2 border-slate-900 dark:border-slate-500"
             variants={linkUnderlineVariants}
           ></motion.div>
         </motion.div>
@@ -72,7 +72,7 @@ const Button = (props: {
     return (
       <motion.div animate="animate" whileHover="hover">
         <motion.div
-          className="text-xl text-stone-500 flex flex-col justify-center items-center w-20 hover:w-28 hover:ease-in transition"
+          className="text-xl text-slate-500 flex flex-col justify-center items-center w-20 hover:w-28 hover:ease-in transition"
           variants={linkLabelVariants}
         >
           <Link href={props.href}>

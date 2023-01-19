@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 const mainContainerStyles =
   "w-screen h-screen flex flex-col space-y-6 justify-center"
 
-const mainContentStyles = "w-full h-full flex flex-col bg-stone-200 dark:bg-stone-900 justify-center";
+const mainContentStyles = "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-center";
 
 export default function Home() {
 

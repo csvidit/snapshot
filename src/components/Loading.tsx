@@ -17,7 +17,7 @@ const Loading = (props: {
     "w-screen h-screen flex flex-col space-y-6 justify-center"
 
   const mainContentStyles =
-    "w-full h-full flex flex-col space-y-1 bg-stone-200 dark:bg-stone-900 justify-center";
+    "w-full h-full flex flex-col space-y-1 bg-slate-200 dark:bg-slate-900 justify-center";
 
   return (
     <div className={mainContainerStyles}>

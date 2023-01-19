@@ -11,7 +11,7 @@ const LandingPage = () => {
     "w-screen h-screen flex flex-col space-y-6 justify-center overflow-hidden"
 
   const mainContentStyles =
-    "w-full h-full flex flex-col bg-stone-200 dark:bg-stone-900 justify-center";
+    "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-center";
 
   const opacityVariants = {
     visible: {
