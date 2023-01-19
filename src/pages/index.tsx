@@ -25,7 +25,7 @@ export default function Home() {
 
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return (<Loading>Loading...</Loading>);
+  if (isLoading) return (<Loading>Loading</Loading>);
   if (error) return <div>{error.message}</div>;
 
   if(user)
