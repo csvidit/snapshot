@@ -17,7 +17,7 @@ import Loading from "@/components/Loading";
 const inter = Inter({ subsets: ["latin"] });
 
 const mainContainerStyles =
-  "w-screen h-screen flex flex-col space-y-6 justify-center " + styles.sg;
+  "w-screen h-screen flex flex-col space-y-6 justify-center"
 
 const mainContentStyles = "w-full h-full flex flex-col bg-stone-200 dark:bg-stone-900 justify-center";
 

@@ -8,7 +8,7 @@ import Title from "./Title";
 
 const LandingPage = () => {
   const mainContainerStyles =
-    "w-screen h-screen flex flex-col space-y-6 justify-center overflow-hidden " + styles.sg;
+    "w-screen h-screen flex flex-col space-y-6 justify-center overflow-hidden"
 
   const mainContentStyles =
     "w-full h-full flex flex-col bg-stone-200 dark:bg-stone-900 justify-center";
