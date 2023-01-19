@@ -5,13 +5,10 @@ import MiniProfile from "./MiniProfile";
 import MoreInfo from "./MoreInfo";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
+import { mainContainerStyles, mainContentStyles } from "../MainStyles";
 
 const LandingPage = () => {
-  const mainContainerStyles =
-    "w-screen h-screen flex flex-col space-y-6 justify-center overflow-hidden"
-
-  const mainContentStyles =
-    "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-center";
+  
 
   const opacityVariants = {
     visible: {

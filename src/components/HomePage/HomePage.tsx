@@ -5,17 +5,12 @@ import { motion } from "framer-motion";
 import Button from "../LandingPage/Button";
 import Link from "next/link";
 import Nav from "./Nav";
+import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 
 const HomePage = (props: any) => {
-  const mainContainerStyles =
-    "w-screen h-screen flex flex-col space-y-6 justify-left"
-
-  const mainContentStyles =
-    "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-left";
-
   return (
-    <div className={mainContainerStyles}>
-      <div className={mainContentStyles}>
+    <div className={mainContainerStylesLeft}>
+      <div className={mainContentStylesLeft}>
         <Nav></Nav>
         <div className="flex flex-col lg:flex-row">
 

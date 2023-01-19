@@ -6,9 +6,9 @@ import Nav2 from "./Nav2";
 
 const Nav = () => {
   return (
-    <nav className="p-3 lg:p-5 flex flex-row justify-between border-b-2 border-b-slate-500 font-semibold">
+    <nav className="pt-1 pb-1 pl-3 pr-3 flex flex-row justify-between border-b-2 border-b-slate-800 font-light">
       <div className="self-center">
-        <h1 className="text-amber-600 text-2xl lg:text-3xl self-center">
+        <h1 className="text-amber-600 text-xl self-center">
           <Link href="/">your snapshot</Link>
         </h1>
       </div>
@@ -21,8 +21,8 @@ const Nav = () => {
 
 export default Nav;
 
-
-{/* <Popover className="relative">
+{
+  /* <Popover className="relative">
           <Popover.Button className="flex flex-row space-x-1 items-center text-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:ring-offset-4 focus:ring-offset-amber-600">
             <p className="">Menu</p>
             <BsChevronDown className="ui-open:rotate-180 ui-open:transform" />
@@ -45,8 +45,8 @@ export default Nav;
               </div>
             </Popover.Panel>
           </Transition>
-        </Popover> */}
-
+        </Popover> */
+}
 
 {
   /* <Link className="text-stone-500 hover:text-sky-500" href="/preferences">

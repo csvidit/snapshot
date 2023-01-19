@@ -7,16 +7,12 @@ import Container from "./Container";
 import ContentContainer from "../unused/ContentContainer";
 import * as Space from "react-spaces";
 import Section from "./Section";
+import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 
 const PreferencesPage = () => {
-  const mainContainerStyles =
-    "w-screen h-screen flex flex-col space-y-6 justify-left";
-
-  const mainContentStyles =
-    "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-left";
   return (
-    <div className={mainContainerStyles}>
-      <div className={mainContentStyles}>
+    <div className={mainContainerStylesLeft}>
+      <div className={mainContentStylesLeft}>
         <Nav></Nav>
         <div className="w-max text-4xl lg:text-6xl text-amber-600">
           <p className="m-3 lg:m-5">PREFERENCES</p>
