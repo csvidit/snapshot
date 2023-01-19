@@ -14,10 +14,11 @@ const PreferencesPage = () => {
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>
         <Nav></Nav>
-        <div className="w-max text-4xl lg:text-6xl text-amber-600">
-          <p className="m-3 lg:m-5">PREFERENCES</p>
-        </div>
+        <div className="w-3/4"></div>
         <Container>
+        <div className="text-2xl lg:text-4xl text-amber-600 font-light">
+          <p className="mt-3 mb-3 lg:mt-5 lg:mb-5">Preferences</p>
+        </div>
           <Space.Fixed height="100%">
             <Space.Left size="20%">
               <SidePanel></SidePanel>

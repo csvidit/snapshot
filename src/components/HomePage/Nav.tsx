@@ -6,16 +6,17 @@ import Nav2 from "./Nav2";
 
 const Nav = () => {
   return (
-    <nav className="pt-1 pb-1 pl-3 pr-3 flex flex-row justify-between border-b-2 border-b-slate-800 font-light">
+    <div className="pt-1 pb-1 pl-3 pr-3 flex flex-row justify-between border-b-2 border-b-slate-800 font-light">
       <div className="self-center">
-        <Link className="text-amber-600 text-xl self-center" href="/">
-          <p className="self-center">Your Snapshot</p>
+        <Link className="text-amber-600 text-md flex flex-row space-x-1 font-medium self-center" href="/">
+          <p className="self-center">SNAPSHOT</p>
+          <p className="rounded-full bg-teal-900 text-teal-400 text-xs pr-2 pl-2 pt-1 pb-1">BETA</p>
         </Link>
       </div>
       <div className="self-center items-center text-md">
         <Nav2></Nav2>
       </div>
-    </nav>
+    </div>
   );
 };
 

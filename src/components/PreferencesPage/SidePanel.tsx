@@ -4,7 +4,7 @@ import SidePanelTab from "./SidePanelTab";
 
 const SidePanel = () => {
   return (
-    <div className="h-full w-full border-r-2 border-stone-500">
+    <div className="h-full w-full border-r border-slate-800 text-sm">
       <div className="flex flex-col">
         <SidePanelTab href="#weather">Weather</SidePanelTab>
         <SidePanelTab href="#news">News</SidePanelTab>

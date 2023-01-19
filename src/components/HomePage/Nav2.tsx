@@ -18,7 +18,7 @@ export default function Nav2() {
         <Menu.Button className="inline-flex w-full justify-center self-center items-center">
           {/* Menu
           <BsChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" /> */}
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
         </Menu.Button>
       </div>
 
