@@ -19,6 +19,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/LandingPage/MiniProfile.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/LandingPage/MiniProfile.tsx", "src/components/HomePage/Weather/Weather.js"],
   "exclude": ["node_modules"]
 }

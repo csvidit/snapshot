@@ -1,13 +1,19 @@
 import React from "react";
 import GaugeChart from "react-gauge-chart";
 import styles from "./AQI.module.css"
+import { MdOutlineAir } from "react-icons/md"
 
 const AQI = () => {
   return (
     <div className="flex flex-col h-max space-y-1 hover:bg-slate-800 p-4 rounded-xl w-64 font-medium justify-between col-span-1">
+      <div className="flex flex-row space-x-1">
+        <MdOutlineAir size="2em"></MdOutlineAir>
       <p className="text-blue-500 text-2xl">AQI</p>
+      
+      </div>
+      
       <div className="flex flex-col space-y-1">
-        <p className="text-violet-700 text-6xl">251</p>
+        <p className="text-violet-700 text-8xl">251</p>
         <p className="text-violet-700">REALLY BAD</p>
         <div className="relative flex flex-row space-x-0 w-full items-start">
         <div id="" className={"h-1 w-full self-center "+styles.aqi_slider}></div>

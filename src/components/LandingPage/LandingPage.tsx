@@ -5,7 +5,7 @@ import MiniProfile from "./MiniProfile";
 import MoreInfo from "./MoreInfo";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
-import { mainContainerStyles, mainContentStyles } from "../MainStyles";
+import { landingPageContainerStyles, mainContentStyles } from "../MainStyles";
 
 const LandingPage = () => {
   
@@ -29,7 +29,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className={mainContainerStyles}>
+    <div className={landingPageContainerStyles}>
       <motion.div
         className={mainContentStyles}
         // style={{ opacity: 0, translateY: 800, scrollBehavior: "smooth"}}
@@ -72,9 +72,6 @@ const LandingPage = () => {
           <Subtitle>your daily briefing</Subtitle>
         </motion.div>
         <motion.div className="self-center mt-10">
-          <MoreInfo link="true" href="https://github.com/csvidit/snapshot">
-            from the world of vidit khandelwal
-          </MoreInfo>
         </motion.div>
         {/* <motion.div className="self-center mt-10">
             <Button href="/api/auth/login">Login</Button>
@@ -85,6 +82,11 @@ const LandingPage = () => {
         <motion.div className="self-center">
           <MiniProfile></MiniProfile>
         </motion.div>
+        <MoreInfo link="true" href="https://github.com/csvidit/snapshot">
+            <p>FROM THE WORLD OF VIDIT KHANDELWAL</p>
+            <p>CURRENTLY IN <p className="inline text-red-400 text-xs">ALPHA</p> STAGE</p>
+            <p>INVITE ONLY</p>
+          </MoreInfo>
       </motion.div>
     </div>
   );
