@@ -10,7 +10,7 @@ const Nav = () => {
       <div className="self-center">
         <Link className="text-amber-600 text-md flex flex-row space-x-1 font-medium self-center" href="/">
           <p className="self-center">SNAPSHOT</p>
-          <p className="rounded-full bg-teal-900 text-teal-400 text-xs pr-2 pl-2 pt-1 pb-1">BETA</p>
+          <p className="rounded-full bg-red-900 text-red-400 text-xs pr-2 pl-2 pt-1 pb-1">ALPHA</p>
         </Link>
       </div>
       <div className="self-center items-center text-md">

@@ -1,5 +1,7 @@
+import styles from "../styles/Home.module.css"
+
 export const mainContainerStyles =
-"w-screen h-screen flex flex-col space-y-6 justify-center"
+"w-screen h-screen flex flex-col space-y-6 justify-center";
 
 export const mainContentStyles =
 "w-full h-full flex flex-col bg-slate-200 dark:bg-slate-900 justify-center";

@@ -7,14 +7,40 @@ import Link from "next/link";
 import Nav from "./Nav";
 import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 import Weather from "./Weather/Weather";
+import AQI from "./Weather/AQI";
+import WeatherImage from "./Weather/WeatherImage";
+import TemperatureDetails from "./Weather/TemperatureDetails";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from "recharts";
+import { XYFrame } from "semiotic"
+import News from "./News/News";
+import Socials from "./Socials/Socials";
 
 const HomePage = (props: any) => {
+  const data = [
+    { name: "min", temp: "9" },
+    { name: "max", temp: "25" },
+    { name: "bla", temp: "30" },
+    { name: "blu", temp: "21" },
+  ];
+
   return (
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>
         <Nav></Nav>
-        <div className="flex flex-col lg:flex-row">
-          <Weather></Weather>
+        <div className="p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
+          <WeatherImage></WeatherImage>
+          <TemperatureDetails></TemperatureDetails>
+          <AQI></AQI>
+          <News></News>
+          <Socials></Socials>
         </div>
       </div>
     </div>
@@ -22,3 +48,5 @@ const HomePage = (props: any) => {
 };
 
 export default HomePage;
+
+//self-center place-content-between w-full h-full

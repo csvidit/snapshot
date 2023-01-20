@@ -16,7 +16,7 @@ const PreferencesPage = () => {
         <Nav></Nav>
         <div className="w-3/4"></div>
         <Container>
-        <div className="text-2xl lg:text-4xl text-amber-600 font-light">
+        <div className="text-2xl lg:text-4xl text-amber-600 font-extralight">
           <p className="mt-3 mb-3 lg:mt-5 lg:mb-5">Preferences</p>
         </div>
           <Space.Fixed height="100%">
