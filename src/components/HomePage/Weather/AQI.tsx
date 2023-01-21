@@ -3,7 +3,7 @@ import GaugeChart from "react-gauge-chart";
 import styles from "./AQI.module.css"
 import { MdOutlineAir } from "react-icons/md"
 
-const AQI = (props) => {
+const AQI = (props: { aqi: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
   return (
     <div className="flex flex-col h-max space-y-1 hover:bg-slate-800 p-4 rounded-xl w-64 font-medium justify-between col-span-1">
       <div className="flex flex-row space-x-1">
