@@ -5,8 +5,11 @@
 An under-development NextJS web application that gives the user a snapshot of the day, personalized to their preferences.
 Authentication through Auth0.
 
-This app is not available for public sign-ups and is mostly supposed to be a proof of concept at the moment. If you would like to see it in action, please use these test credentials to log in and play around:
+This app is not available for public sign-ups (mostly due to very limited free API calls available) and is mostly supposed to be a proof of concept at the moment. If you would like to see it in action, please use these test credentials to log in and play around a bit. The user preferences section of the website is under development at the moment. 
 
-Username: test-snapshot
-Password: t@ilwind81
+**Due to limitations of the free plan, the API used for fetching news will only work when the app is run locally, i.e., at ```localhost:3000``` or similar.**
+
+### Test Credentials
+
+Coming Soon
 
