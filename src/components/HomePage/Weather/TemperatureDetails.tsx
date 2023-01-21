@@ -11,7 +11,7 @@ import {
   Legend,
 } from "recharts";
 
-const TemperatureDetails = (props: {currTemp: number, minTemp: number, maxTemp: number}) => {
+const TemperatureDetails = (props: {currTemp: string, minTemp: string, maxTemp: string}) => {
   const data = [{ name: "min", temp: "9" }];
 
   return (
