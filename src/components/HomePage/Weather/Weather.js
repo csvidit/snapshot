@@ -8,18 +8,27 @@ import WeatherLoading from "./WeatherLoading";
 const Weather = () => {
   // const OWM_ApiUrl_TEST = "http://api.openweathermap.org/geo/1.0/direct?q=Kolkata,IND&limit=1&appid=cf2bb18d7e98e65278f4c2cae17ee895"
   const OWM_ApiUrl_TEST =
-    "https://api.openweathermap.org/data/2.5/weather?lat=22.5726723&lon=88.3638815&units=metric&appid=" +
+    "https://api.openweathermap.org/data/2.5/weather?lat=22.5726723&lon=88.3638815&units=metric&appid=cf2bb18d7e98e65278f4c2cae17ee895" +
     process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
-  // const OWM_ApiUrl_AQI = "http://api.openweathermap.org/data/2.5/air_pollution?lat=22.5726723&lon=88.3638815&appid="+process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
+  const OWM_ApiUrl_AQI = "http://api.openweathermap.org/data/2.5/air_pollution?lat=22.5726723&lon=88.3638815&appid="+process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
 
-  const [data, setData] = useState([]);
+  const [weather, setWeather] = useState([]);
+  const [aqi, setAqi] = useState([]);
 
-  const fetchData = () => {
+  const fetchTemp = () => {
     return axios
       .get(OWM_ApiUrl_TEST)
       .then((response) => response)
-      .then((response) => setData(response.data));
+      .then((response) => setWeather(response.data));
   };
+
+  const fetchAQI = () =>
+  {
+    return axios
+      .get(OWM_ApiUrl_AQI)
+      .then((response) => response)
+      .then((response) => setAqi(response.data));
+  }
 
   useEffect(() => {
     // const fetchData = () => {
@@ -28,11 +37,12 @@ const Weather = () => {
     //     .then((response) => response)
     //     .then((response) => setData(response.data));
     // };
-    fetchData();
-    console.log(data);
+    fetchTemp();
+    fetchAQI();
+    // console.log(data);
   }, []);
 
-  if (data) {
+  if (weather && aqi) {
     // let vals = []
     // data.main.map((val, index) => {
     //   vals[index] = val;
@@ -45,9 +55,9 @@ const Weather = () => {
         <div>{vals[1]}</div>
         <div>{vals[2]}</div>
         <div>{vals[3]}</div> */}
-        <TemperatureDetails currTemp={data?.main?.temp} minTemp={data?.main?.temp_min} maxTemp={data?.main?.temp_max} />
+        <TemperatureDetails currTemp={weather?.main?.temp} minTemp={weather?.main?.temp_min} maxTemp={weather?.main?.temp_max} />
         {/* <TemperatureDetails /> */}
-        <AQI />
+        <AQI aqi={aqi?.list[0]?.components?.no2} />
       </div>
     );
   } else {
