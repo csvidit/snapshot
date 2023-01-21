@@ -39,7 +39,7 @@ const Weather = () => {
     return (
       <div className="flex flex-col lg:flex-row col-span-2 justify-between space-between">
         <TemperatureDetails
-          currTemp={weather?.main?.temp}
+          temp={weather?.main?.temp}
           minTemp={weather?.main?.temp_min}
           maxTemp={weather?.main?.temp_max}
         />
