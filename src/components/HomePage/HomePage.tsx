@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../LandingPage/LandingPage.module.css";
 import Title from "../LandingPage/Title";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { XYFrame } from "semiotic"
+import { XYFrame } from "semiotic";
 import News from "./News/News";
 import Socials from "./Socials/Socials";
 
@@ -35,10 +35,9 @@ const HomePage = (props: any) => {
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>
         <Nav></Nav>
-        <div className="p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
+        <div className="p-4 lg:p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
           <WeatherImage></WeatherImage>
-          <TemperatureDetails></TemperatureDetails>
-          <AQI></AQI>
+          <Weather/>
           <News></News>
           <Socials></Socials>
         </div>

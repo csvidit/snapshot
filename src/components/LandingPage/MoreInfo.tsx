@@ -17,14 +17,11 @@ const MoreInfo = (props: {
   if (props.link === "true") {
     return (
       <React.Fragment>
-        <Link
-          href={props.href}
-          className="hover:text-sky-500 text-slate-500 self-center mt-10 text-xl"
-          target="_blank"
-          rel="noreferrer"
+        <div
+          className="text-slate-500 self-center mt-10 text-xs flex flex-col items-center text-center"
         >
           <p className="">{props.children}</p>
-        </Link>
+        </div>
       </React.Fragment>
     );
   } else {

@@ -13,7 +13,7 @@ const Subtitle = (props: {
 }) => {
   return (
     <React.Fragment>
-        <h2 className="text-slate-500 self-center tracking-tight text-4xl">{props.children}</h2>
+        <h2 className="text-slate-500 self-center tracking-tight text-3xl font-extralight">{props.children}</h2>
     </React.Fragment>
   );
 };

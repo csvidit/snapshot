@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
+import TwitterCard from "./TwitterCard";
 
 const Socials = () => {
   return (
@@ -11,6 +12,16 @@ const Socials = () => {
         ></HiOutlineArrowTrendingUp>
         <p className="text-2xl ">Trending on Socials</p>
       </div>
+      <div className="w-full h-full grid lg:grid-rows-2 lg:grid-cols-4">
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      <TwitterCard></TwitterCard>
+      </div>
+      
     </div>
   );
 };
