@@ -37,7 +37,7 @@ const HomePage = (props: any) => {
         <Nav></Nav>
         <div className="p-4 lg:p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
           <WeatherImage></WeatherImage>
-          <Weather/>
+          {/* <Weather/> */}
           <News></News>
           <Socials></Socials>
         </div>
