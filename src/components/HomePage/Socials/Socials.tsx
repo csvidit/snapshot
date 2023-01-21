@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
 import TwitterCard from "./TwitterCard";
+import {Oval} from "react-loader-spinner"
 
 const Socials = () => {
   return (
@@ -12,16 +13,19 @@ const Socials = () => {
         ></HiOutlineArrowTrendingUp>
         <p className="text-2xl ">Trending on Socials</p>
       </div>
+      <div className="w-100 h-100 flex flex-col space-x-1 justify-center items-center text-white">
+        <p className="text-2xl text-red-500">don&apos;t be sad!</p>
+        <p className="text-2xl">this feature is coming soon.</p>
+    </div>
       <div className="w-full h-full grid lg:grid-rows-2 lg:grid-cols-4">
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
-      <TwitterCard></TwitterCard>
+        {/* <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard>
+        <TwitterCard></TwitterCard> */}
       </div>
-      
     </div>
   );
 };

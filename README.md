@@ -9,6 +9,8 @@ This app is not available for public sign-ups (mostly due to very limited free A
 
 **Due to limitations of the free plan, the API used for fetching news will only work when the app is run locally, i.e., at ```localhost:3000``` or similar.**
 
+Twitter is in the process of deprecating its current API and its endpoint for getting Trends data is not available yet, so the 'Trending on Socials' feature's development will take longer.
+
 ### Test Credentials
 
 Coming Soon
