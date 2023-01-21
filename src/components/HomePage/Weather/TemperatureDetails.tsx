@@ -55,7 +55,7 @@ const TemperatureDetails = (props: {currTemp: string, minTemp: string, maxTemp: 
         <div className="flex flex-col justify-end">
           <p className="text-blue-500 text-xs self-end">MAX</p>
           <div className="flex flex-row space-x-1 text-md">
-            <p className="text-blue-500 self-center">{props.minTemp}</p>
+            <p className="text-blue-500 self-center">{props.maxTemp}</p>
             <p className="text-blue-500 self-center">&deg;C</p>
           </div>
         </div>
