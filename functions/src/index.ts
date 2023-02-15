@@ -2,7 +2,7 @@ import * as functions from "firebase-functions";
 import axios from "axios";
 import {getFirestore} from "firebase-admin/firestore";
 import {initializeApp} from "firebase-admin/app";
-exports.newsFetcher = functions.pubsub.schedule("*/1 * * * *")
+exports.newsFetcher = functions.pubsub.schedule("*/30 * * * *")
   .onRun( async (context) => {
     console.log("newsFetcher");
     initializeApp();
