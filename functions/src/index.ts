@@ -2,8 +2,9 @@ import * as functions from "firebase-functions";
 import axios from "axios";
 import {getFirestore} from "firebase-admin/firestore";
 import {initializeApp} from "firebase-admin/app";
-exports.newsFetcher = functions.pubsub.schedule("*/30 * * * *")
+exports.newsFetcher = functions.pubsub.schedule("*/1 * * * *")
   .onRun( async (context) => {
+    console.log("newsFetcher");
     initializeApp();
     const db = getFirestore();
     const newsKeyRef = db.collection("keys").doc("news");
