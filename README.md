@@ -7,14 +7,33 @@ Authentication through Auth0.
 
 This app is not available for public sign-ups (mostly due to very limited free API calls available) and is mostly supposed to be a proof of concept at the moment. If you would like to see it in action, please use these test credentials to log in and play around a bit. The user preferences section of the website is under development at the moment. 
 
-**Due to limitations of the free plan, the API used for fetching news will only work when the app is run locally, i.e., at ```localhost:3000``` or similar.**
-
 Twitter is in the process of deprecating its current API and its endpoint for getting Trends data is not available yet, so the 'Trending on Socials' feature's development will take longer.
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* TailwindCSS
+* Framer Motion
+
+### Backend
+
+* Node.js
+
+### Database
+
+* Firebase Firestore 
+
+### Authentication
+
+* Auth0
+
 
 ## Inner Workings
 
 ### News 
-A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app. 
+A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
 
 ### Test Credentials
 
