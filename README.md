@@ -11,6 +11,11 @@ This app is not available for public sign-ups (mostly due to very limited free A
 
 Twitter is in the process of deprecating its current API and its endpoint for getting Trends data is not available yet, so the 'Trending on Socials' feature's development will take longer.
 
+## Inner Workings
+
+### News 
+A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app. 
+
 ### Test Credentials
 
 Coming Soon
