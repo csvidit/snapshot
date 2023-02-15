@@ -42,6 +42,7 @@ const Weather = () => {
           temp={weather?.main?.temp}
           minTemp={weather?.main?.temp_min}
           maxTemp={weather?.main?.temp_max}
+          windSpeed={weather?.wind?.speed}
         />
         {aqi?.list?.map(x => {return <AQI key={x?.main?.aqi} aqi={x?.main?.aqi}></AQI>})}
       </div>

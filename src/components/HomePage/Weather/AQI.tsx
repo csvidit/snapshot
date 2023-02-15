@@ -3,7 +3,10 @@ import GaugeChart from "react-gauge-chart";
 import styles from "./AQI.module.css"
 import { MdOutlineAir } from "react-icons/md"
 
-const AQI = (props: { aqi: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
+const AQI = (props: { aqi: number}) => {
+  
+  const pointerLeft = props.aqi*(51.2);
+
   return (
     <div className="flex flex-col h-max space-y-1 hover:bg-slate-800 p-4 rounded-xl w-64 font-medium justify-between col-span-1">
       <div className="flex flex-row space-x-1">
@@ -17,7 +20,7 @@ const AQI = (props: { aqi: string | number | boolean | React.ReactElement<any, s
         <p className="text-violet-700">REALLY BAD</p>
         <div className="relative flex flex-row space-x-0 w-full items-start">
         <div id="" className={"h-1 w-full self-center "+styles.aqi_slider}></div>
-          <div className="absolute z-10 h-3 w-1 left-8 bg-white self-center"></div>
+          <div className={"absolute z-10 h-3 w-1 bg-white self-center left-["+pointerLeft.toString()+"px]"}></div>
         </div>
         <div className="flex flex-row justify-between text-xs">
           <p className="text-blue-500 self-center">0</p>

@@ -39,7 +39,7 @@ const HomePage = (props: any) => {
           <WeatherImage></WeatherImage>
           <Weather/>
           <News></News>
-          <Socials></Socials>
+          {/* <Socials></Socials> */}
         </div>
       </div>
     </div>

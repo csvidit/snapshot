@@ -15,6 +15,7 @@ const TemperatureDetails = (props: {
   temp: number;
   minTemp: number;
   maxTemp: number;
+  windSpeed: number;
 }) => {
   const tempColor = (temp: number) => {
     if (temp < 0) {
@@ -61,6 +62,11 @@ const TemperatureDetails = (props: {
             <p className="text-yellow-500 text-4xl self-center">-</p>
             <p className="text-yellow-500 text-2xl self-start">&deg;C</p>
           </div>
+          <p className="text-slate-500 text-md self-end">WIND</p>
+          <div className="flex flex-row space-x-1 space-y-1">
+            <p className="text-white text-4xl self-center">{Math.trunc(props.windSpeed)}</p>
+            <p className="text-white text-2xl self-start">ms<sup>-1</sup></p>
+          </div>
         </div>
       </div>
       <div className="flex flex-row space-x-0 w-full items-start text-slate-300 text-xs">
@@ -86,6 +92,9 @@ const TemperatureDetails = (props: {
             <p className="self-center">&deg;C</p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-row space-x-1 w-full items-center text-slate-300 text-xs">
+        <p>Min and Max are for current variations in temperature across the city only.</p>
       </div>
     </div>
   );

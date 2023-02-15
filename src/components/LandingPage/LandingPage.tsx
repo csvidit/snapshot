@@ -5,6 +5,7 @@ import MiniProfile from "./MiniProfile";
 import MoreInfo from "./MoreInfo";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
+import Image from "next/image";
 import { landingPageContainerStyles, mainContentStyles } from "../MainStyles";
 
 const LandingPage = () => {
@@ -61,7 +62,8 @@ const LandingPage = () => {
           animate="visible"
           initial="hidden"
         >
-          <Title>snapshot</Title>
+          {/* <Title>snapshot</Title> */}
+          <Image width={256} height={256} className="self-center" src="./snapshot.svg" alt="Illustration of person sitting and reading a newspaper"></Image>
         </motion.div>
         <motion.div
           className="self-center"

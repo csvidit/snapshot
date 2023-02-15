@@ -3,6 +3,7 @@ import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import {motion} from "framer-motion"
 import Link from "next/link";
+import { createApi } from 'unsplash-js';
 
 const WeatherImage = () => {
   return (
