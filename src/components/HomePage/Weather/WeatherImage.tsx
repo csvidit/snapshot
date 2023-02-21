@@ -6,6 +6,7 @@ import Link from "next/link";
 import { createApi } from 'unsplash-js';
 
 const WeatherImage = () => {
+
   return (
     <div className="col-span-2 flex flex-col">
       <Image

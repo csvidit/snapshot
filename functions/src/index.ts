@@ -24,10 +24,7 @@ exports.imageFetcher = functions.pubsub.schedule("*/30 * * * *")
     const newsKeyRef = db.collection("keys").doc("assets");
     const doc = await newsKeyRef.get();
     const client = createClient(doc.get("pexels_key"));
-    const query = "Nature";
-    return client.photos.search({query, per_page: 1})
+    return client.photos.curated({per_page: 1})
       .then(async (photos) => await db.collection("photos").doc("items")
         .set(JSON.parse(JSON.stringify(photos))));
   });
-
-

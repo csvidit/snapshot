@@ -5,6 +5,8 @@ import LandingPage from "@/components/LandingPage/LandingPage";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import HomePage from "@/components/HomePage/HomePage";
 import Loading from "@/components/Loading";
+import { initializeApp } from "firebase/app";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

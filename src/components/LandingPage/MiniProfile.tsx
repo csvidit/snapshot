@@ -1,5 +1,6 @@
 import React from "react";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { getAuth } from "@clerk/nextjs/server";
+import type { NextApiRequest, NextApiResponse } from 'next'
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "./Button";
@@ -22,7 +23,7 @@ export default function MiniProfile() {
   }
   return (
     <motion.div className="self-center mt-10">
-      <Button underline="true" href="/api/auth/login">Login</Button>
+      <Button underline="true" href="/sign-in">Login</Button>
     </motion.div>
   );
 }

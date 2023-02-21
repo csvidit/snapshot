@@ -15,7 +15,6 @@ Twitter is in the process of deprecating its current API and its endpoint for ge
 
 * Next.js
 * TailwindCSS
-* Framer Motion
 
 ### Backend
 
@@ -23,17 +22,23 @@ Twitter is in the process of deprecating its current API and its endpoint for ge
 
 ### Database
 
-* Firebase Firestore 
+* Cloud Firestore (called Datastore within Google Cloud)
 
 ### Authentication
 
 * Auth0
 
-
 ## Inner Workings
 
-### News 
-A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
+### APIs
+
+* News API
+* The New York Times
+* Pexels
+
+### News
+
+A Pub/Sub Firebase Cloud Function (in TypeScript) fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
 
 ### Test Credentials
 
