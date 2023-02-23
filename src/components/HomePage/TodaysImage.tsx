@@ -43,8 +43,8 @@ const TodaysImage = () => {
           className="border-b border-slate-700 text-slate-700 text-xs w-[256px] pt-2 pb-2"
           whileHover={{ color: "#64748b", transition: { duration: 0.25 } }}
         >
-          <Link href="https://unsplash.com" className="w-max h-max">
-            &copy; 2022 Unsplash
+          <Link href={items?.photos[0].url} className="w-max h-max">
+            Photo by {items.photos[0].photographer}
           </Link>
         </motion.div>
       </div>

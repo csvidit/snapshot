@@ -22,7 +22,7 @@ const News = () => {
   }, []);
   
   let stories = news?.articles;
-  stories = stories?.slice(0, 4);
+  stories = stories?.slice(0, 5);
 
   if(stories)
   {
@@ -35,7 +35,7 @@ const News = () => {
           ></HiOutlineBolt>
           <p className="text-2xl ">Top Stories</p>
         </div>
-        {stories?.map(x => {return <StoryCard key={x?.title} title={x?.title} source={x?.source?.name} time={x?.publishedAt}></StoryCard>})}
+        {stories?.map(x => {return <StoryCard key={x?.title} title={x?.title} source={x?.source?.name} time={x?.publishedAt} href={x?.url}></StoryCard>})}
         {/* <StoryCard title={stories[0]?.title} source={stories[0]?.source?.name} time={stories[0]?.publishedAt}></StoryCard> */}
       </div>
     );
