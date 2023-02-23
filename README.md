@@ -33,10 +33,14 @@ Twitter is in the process of deprecating its current API and its endpoint for ge
 ## Inner Workings
 
 ### Today's Image
-A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the photos collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app. The JSON is parsed, and then the image is fetched through its URL via axios. 
+A Pub/Sub Firebase Cloud Function fetches news from the Pexels API every 30 minutes and stores the data in a Firestore database collection. The app fetches the items document from the photos collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app. The JSON is parsed, and then the image is fetched through its URL. 
 
 ### News 
-A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
+A Pub/Sub Firebase Cloud Function fetches news from the News API every 30 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
+
+### Why use scheduled cloud functions and not just client or server-side API calls? 
+Because of the limits of free APIs/free tiers of those APIs. When we consider testing (both in localhost and in production builds) and a number of separate users, those API calls are going to add up, whenever any user reloads to the index route. One possible workaround is storing a bunch of data in the user's browser with their session, but I did not want to do that. Using a scheduled function means that calls to external APIs are done only so long as they are absolutely required (in this case, every 30 minutes for updating of data). Read calls to Firestore are much cheaper than calls to the API themselves, at least in my experience. Obviously, this does not matter if the app is only used as a hobby sometimes. But developing it from the intention of it going to public use and production means that such decisions should be made.
+
 
 ### Test Credentials
 
