@@ -3,6 +3,8 @@ import { HiOutlineBolt } from "react-icons/hi2";
 import StoryCard from "./StoryCard";
 import axios from "axios";
 import NewsLoading from "./NewsLoading";
+import { db } from "@/firebaseConfig";
+import { query, collection, getDocs } from "@firebase/firestore";
 
 const News = () => {
   const [news, setNews] = useState(null);
@@ -13,16 +15,16 @@ const News = () => {
     {
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-        setItems(doc.data());
+        setNews(doc.data());
       });
     }
     fetchQuerySnapshot();
   }, []);
   
-  let stories = news;
-  stories = stories.slice(0,4);
+  let stories = news?.articles;
+  stories = stories?.slice(0, 4);
 
-  if(news)
+  if(stories)
   {
     return (
       <div className="flex flex-col space-y-1 p-4 rounded-xl col-span-2 font-light h-max">
