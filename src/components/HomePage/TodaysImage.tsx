@@ -30,7 +30,6 @@ const TodaysImage = () => {
   const url = items?.photos[0]?.src?.landscape;
 
   if (url) {
-    console.log(url);
     return (
       <div className="col-span-2 flex flex-col">
         <Image
