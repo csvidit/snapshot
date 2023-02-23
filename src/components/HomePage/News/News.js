@@ -5,22 +5,19 @@ import axios from "axios";
 import NewsLoading from "./NewsLoading";
 
 const News = () => {
-  const [news, setNews] = useState([]);
-
-  const apiUrl =
-    "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=" +
-    process.env.NEXT_PUBLIC_NEWS_API_KEY;
-
-  const fetchNews = () => {
-    return axios
-      .get(apiUrl)
-      .then((response) => response)
-      .then((response) => setNews(response.data?.articles));
-  };
+  const [news, setNews] = useState(null);
 
   useEffect(() => {
-    fetchNews();
-  },[]);
+    const q = query(collection(db, "news"));
+    const fetchQuerySnapshot = async () =>
+    {
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        setItems(doc.data());
+      });
+    }
+    fetchQuerySnapshot();
+  }, []);
   
   let stories = news;
   stories = stories.slice(0,4);
