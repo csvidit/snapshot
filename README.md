@@ -32,6 +32,9 @@ Twitter is in the process of deprecating its current API and its endpoint for ge
 
 ## Inner Workings
 
+### Today's Image
+A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the photos collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app. The JSON is parsed, and then the image is fetched through its URL via axios. 
+
 ### News 
 A Pub/Sub Firebase Cloud Function fetches news from the News API every 15 minutes and stores the data in a Firestore database collection. The app fetches the items document from the news collection of that Firestore database whenever the logged-in user goes to the ```/``` route of the app.
 

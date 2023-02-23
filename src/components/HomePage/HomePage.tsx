@@ -7,7 +7,6 @@ import Link from "next/link";
 import Nav from "./Nav";
 import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 import Weather from "./Weather/Weather";
-import AQI from "./Weather/AQI";
 import WeatherImage from "./Weather/WeatherImage";
 import TemperatureDetails from "./Weather/TemperatureDetails";
 import {
@@ -22,6 +21,7 @@ import {
 import { XYFrame } from "semiotic";
 import News from "./News/News";
 import Socials from "./Socials/Socials";
+import TodaysImage from "./TodaysImage";
 
 const HomePage = (props: any) => {
   const data = [
@@ -36,7 +36,8 @@ const HomePage = (props: any) => {
       <div className={mainContentStylesLeft}>
         <Nav></Nav>
         <div className="p-4 lg:p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
-          <WeatherImage></WeatherImage>
+          <h1 className=""></h1>
+          <TodaysImage/>
           <Weather/>
           <News></News>
           {/* <Socials></Socials> */}
