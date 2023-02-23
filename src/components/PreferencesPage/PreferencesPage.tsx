@@ -1,4 +1,4 @@
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { UserProfile, useUser } from "@auth0/nextjs-auth0/client";
 import Loading from "@/components/Loading";
 import React from "react";
 import Nav from "../HomePage/Nav";
@@ -9,11 +9,11 @@ import * as Space from "react-spaces";
 import Section from "./Section";
 import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 
-const PreferencesPage = () => {
+const PreferencesPage = (props: {user: UserProfile}) => {
   return (
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>
-        <Nav></Nav>
+        <Nav user={props.user}></Nav>
         <div className="w-3/4"></div>
         <Container>
         <div className="text-2xl lg:text-4xl text-amber-600 font-extralight">

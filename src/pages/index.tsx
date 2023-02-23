@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import LandingPage from "@/components/LandingPage/LandingPage";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import HomePage from "@/components/HomePage/HomePage";

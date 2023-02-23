@@ -34,7 +34,7 @@ const HomePage = (props: any) => {
   return (
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>
-        <Nav></Nav>
+        <Nav user={props.user}></Nav>
         <div className="p-4 lg:p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
           <TodaysImage/>
           <Weather/>

@@ -3,14 +3,27 @@ import Link from "next/link";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { BsChevronDown } from "react-icons/bs";
 import Nav2 from "./Nav2";
+import { UserProfile } from "@auth0/nextjs-auth0/client";
 
-const Nav = () => {
+const Nav = (props: {user: UserProfile}) => {
+
+  console.log(props.user.user_metadata);
+
   return (
     <div className="pt-1 pb-1 pl-3 pr-3 flex flex-row justify-between border-b-2 border-b-slate-800 font-light">
       <div className="self-center">
-        <Link className="text-amber-600 text-md flex flex-row space-x-1 font-medium self-center" href="/">
-          <p className="self-center">SNAPSHOT</p>
-          <p className="rounded-full bg-red-900 text-red-400 text-xs pr-2 pl-2 pt-1 pb-1">ALPHA</p>
+        <Link
+          className="text-md flex flex-row space-x-1 font-medium self-center"
+          href="/"
+        >
+          <div className="self-center flex flex-row space-x-1">
+            <p className="self-center text-slate-500 uppercase">{props?.user?.nickname}&apos;S</p>
+            <p className="self-center text-amber-600 ">SNAPSHOT</p>
+            <p className="self-center text-slate-500 uppercase">LOCATION: {JSON.stringify(props.user.user_metadata)}</p>
+          </div>
+          <p className="rounded-full bg-red-900 text-red-400 text-xs pr-2 pl-2 pt-1 pb-1">
+            ALPHA
+          </p>
         </Link>
       </div>
       <div className="self-center items-center text-md">
