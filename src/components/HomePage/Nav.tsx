@@ -19,7 +19,6 @@ const Nav = (props: {user: UserProfile}) => {
           <div className="self-center flex flex-row space-x-1">
             <p className="self-center text-slate-500 uppercase">{props?.user?.nickname}&apos;S</p>
             <p className="self-center text-amber-600 ">SNAPSHOT</p>
-            <p className="self-center text-slate-500 uppercase">LOCATION: {JSON.stringify(props.user.user_metadata)}</p>
           </div>
           <p className="rounded-full bg-red-900 text-red-400 text-xs pr-2 pl-2 pt-1 pb-1">
             ALPHA
