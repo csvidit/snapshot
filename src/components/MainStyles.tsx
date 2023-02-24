@@ -8,7 +8,7 @@ export const mainContainerStyles =
 export const mainContentStyles = "w-full h-full flex flex-col justify-center";
 
 export const mainContainerStylesLeft =
-  "w-screen h-fit flex flex-col space-y-6 justify-left bg-slate-200 dark:bg-slate-900";
+  "w-screen h-screen flex flex-col space-y-6 justify-left bg-slate-200 dark:bg-slate-900";
 
 export const mainContentStylesLeft = "w-full h-full flex flex-col justify-left";
 
