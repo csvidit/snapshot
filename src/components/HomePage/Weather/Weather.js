@@ -6,6 +6,18 @@ import axios from "axios";
 import WeatherLoading from "./WeatherLoading";
 
 const Weather = () => {
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+  
+  function showPosition(position) {
+    console.log("Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude);
+  }
+  
   const OWM_ApiUrl_TEST =
     "https://api.openweathermap.org/data/2.5/weather?lat=22.5726723&lon=88.3638815&units=metric&appid=" +
     process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;

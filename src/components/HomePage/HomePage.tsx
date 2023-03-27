@@ -31,6 +31,8 @@ const HomePage = (props: any) => {
     { name: "blu", temp: "21" },
   ];
 
+  console.log(props.user);
+
   return (
     <div className={mainContainerStylesLeft}>
       <div className={mainContentStylesLeft}>

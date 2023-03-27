@@ -4,7 +4,7 @@ const Input = (props: {placeholder: string}) => {
       <input
         type="text"
         placeholder={props.placeholder}
-        className="input input-bordered input-info w-full max-w-xs bg-black focus:bg-slate-800 text-slate-200 rounded-xl"
+        className="input input-bordered input-info w-full max-w-xs bg-black focus:bg-neutral-900 text-slate-200 rounded-xl"
       />
     </div>
   );
