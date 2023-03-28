@@ -71,7 +71,7 @@ const LandingPage = () => {
         </motion.div>
         <MoreInfo link="true" href="https://github.com/csvidit/snapshot">
             <p>FROM THE WORLD OF VIDIT KHANDELWAL</p>
-            <p>CURRENTLY IN <p className="inline text-red-400 text-xs">ALPHA</p> STAGE</p>
+            <p>CURRENTLY IN <p className="inline text-amber-400 text-xs">BETA</p> STAGE</p>
             <p>INVITE ONLY</p>
           </MoreInfo>
       </LandingPageContent>

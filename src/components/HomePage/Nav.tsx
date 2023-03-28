@@ -20,8 +20,8 @@ const Nav = (props: {user: UserProfile}) => {
             <p className="self-center text-slate-500 uppercase">{props?.user?.nickname}&apos;S</p>
             <p className="self-center text-amber-600 ">SNAPSHOT</p>
           </div>
-          <p className="rounded-full bg-red-900 text-red-400 text-xs pr-2 pl-2 pt-1 pb-1">
-            ALPHA
+          <p className="rounded-full bg-amber-900 text-amber-400 text-xs pr-2 pl-2 pt-1 pb-1">
+            BETA
           </p>
         </Link>
       </div>
