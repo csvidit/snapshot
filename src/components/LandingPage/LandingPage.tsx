@@ -6,7 +6,6 @@ import MoreInfo from "./MoreInfo";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
 import Image from "next/image";
-import { landingPageContainerStyles, mainContentStyles } from "../MainStyles";
 import LandingPageContainer from "./LandingPageContainer";
 
 const LandingPage = () => {
