@@ -11,13 +11,16 @@ import {
 } from "recharts";
 import WindRecommendation from "./WindRecommendation";
 import WeatherTitle from "./WeatherTitle";
+import Wind from "./Wind";
+import Rain from "./Rain";
 
-const TemperatureDetails = (props: {
+const WeatherDetails = (props: {
   temp: number;
   minTemp: number;
   maxTemp: number;
   windSpeed: number;
   rain: number;
+  city: string;
 }) => {
   const tempColor = (temp: number) => {
     if (temp < 0) {
@@ -43,10 +46,10 @@ const TemperatureDetails = (props: {
 
   return (
     <div className="flex flex-col space-y-1 rounded-xl w-64 font-light h-max col-span-1">
-      <WeatherTitle />
+      <WeatherTitle city={props.city} />
       <div className="flex flex-row space-x-1 justify-between items-center">
         <div className="flex flex-col space-y-1">
-          <p className="text-blue-500 text-md">NOW</p>
+          <p className="text-blue-500 text-md">TEMP. NOW</p>
           <div className="flex flex-row space-x-1">
             <p className={"text-8xl self-center font-semibold " + nowTextColor}>
               {Math.trunc(props.temp)}
@@ -55,29 +58,8 @@ const TemperatureDetails = (props: {
           </div>
         </div>
         <div className="flex flex-col space-y-1 self-start">
-          <p className="text-blue-500 text-md self-end">WIND</p>
-          <div className="flex flex-row space-x-1 space-y-1">
-            <p className="text-white text-4xl self-center">
-              {Math.trunc(props.windSpeed)}
-            </p>
-            <p className="text-white text-2xl self-start">
-              ms<sup>-1</sup>
-            </p>
-          </div>
-          <p className="text-blue-500 text-md self-end">RAIN</p>
-          <div className="flex flex-row space-x-1 space-y-1">
-            <p className="text-white text-4xl self-center">
-              {props.rain === null || props.rain === undefined
-                ? "-"
-                : Math.trunc(props.rain)}
-            </p>
-            {props.rain != null ||
-              (props.rain != undefined && (
-                <p className="text-white text-2xl self-start">
-                  ms<sup>-1</sup>
-                </p>
-              ))}
-          </div>
+          <Wind windSpeed={props.windSpeed}/>
+          <Rain rain={props.rain}/>
         </div>
       </div>
       <WindRecommendation windSpeed={props.windSpeed} />
@@ -108,4 +90,4 @@ const TemperatureDetails = (props: {
   );
 };
 
-export default TemperatureDetails;
+export default WeatherDetails;

@@ -27,7 +27,7 @@ const AQIRecommendation = (props: { aqi: number }) => {
   }
 
   return (
-    <div className="flex flex-row space-x-0 w-full items-start text-slate-300 text-sm font-light">
+    <div className="flex flex-row space-x-0 w-full items-start text-slate-100 text-sm font-light">
       <p>{aqiRecommendation}</p>
     </div>
   );

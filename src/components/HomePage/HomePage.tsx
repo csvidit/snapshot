@@ -7,7 +7,7 @@ import Link from "next/link";
 import Nav from "./Nav";
 import Weather from "./Weather/Weather";
 import WeatherImage from "./Weather/WeatherImage";
-import TemperatureDetails from "./Weather/TemperatureDetails";
+import TemperatureDetails from "./Weather/WeatherDetails";
 import {
   LineChart,
   Line,

@@ -1,9 +1,9 @@
-import { MdOutlineAir } from "react-icons/md";
+import { WiDust } from "react-icons/wi";
 
 const AQITitle = () => {
   return (
     <div className="flex flex-row space-x-1 items-center clear-left text-blue-500 text-2xl">
-      <MdOutlineAir size="1.5em"></MdOutlineAir>
+      <WiDust size="1.5em"></WiDust>
       <p className="font-light">AQI</p>
     </div>
   );

@@ -41,7 +41,7 @@ const WindRecommendation = (props: { windSpeed: number }) => {
       console.log("Invalid wind speed value.");
   }
   return (
-    <div className="flex flex-row space-x-0 w-full items-start text-slate-300 text-sm">
+    <div className="flex flex-row space-x-0 w-full items-start text-slate-100 text-sm">
       <p>{windRecommendation}</p>
     </div>
   );

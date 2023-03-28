@@ -1,10 +1,10 @@
-import { TiWeatherCloudy } from "react-icons/ti";
+import { BsCloud } from "react-icons/bs";
 
-const WeatherTitle = () => {
+const WeatherTitle = (props: {city: string}) => {
   return (
     <div className="flex flex-row space-x-1 items-center clear-left text-blue-500 text-2xl">
-      <TiWeatherCloudy size="1.5em"></TiWeatherCloudy>
-      <p className="text-blue-500 text-2xl">Weather</p>
+      <BsCloud size="1.5em"></BsCloud>
+      <p className="text-blue-500 text-2xl">{props.city}</p>
     </div>
   );
 };

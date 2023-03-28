@@ -72,5 +72,6 @@ export interface AQIObject {
 
 export interface Location {
   latitude: number,
-  longitude: number
+  longitude: number,
+  city: string
 };
