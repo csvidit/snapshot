@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { TbTemperature } from "react-icons/tb";
+import React from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import {
   LineChart,
