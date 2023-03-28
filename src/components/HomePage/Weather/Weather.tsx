@@ -38,7 +38,7 @@ const Weather = () => {
           process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY
       )
       .then((response) => response)
-      .then((response) => setWeather(response.data));
+      .then((response) => {console.log(response.data); setWeather(response.data)})
 
     axios
       .get(
@@ -61,6 +61,7 @@ const Weather = () => {
           minTemp={weather?.main?.temp_min}
           maxTemp={weather?.main?.temp_max}
           windSpeed={weather?.wind?.speed}
+          rain={weather?.rain?.["1h"]}
         />
         {aqi?.list?.map((x) => {
           return <AQI key={x?.main?.aqi} aqi={x?.main?.aqi}></AQI>;

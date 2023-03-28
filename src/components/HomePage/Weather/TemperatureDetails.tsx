@@ -17,6 +17,7 @@ const TemperatureDetails = (props: {
   minTemp: number;
   maxTemp: number;
   windSpeed: number;
+  rain: number;
 }) => {
   const tempColor = (temp: number) => {
     if (temp < 0) {
@@ -42,10 +43,10 @@ const TemperatureDetails = (props: {
 
   return (
     <div className="flex flex-col space-y-1 rounded-xl w-64 font-light h-max col-span-1">
-      <WeatherTitle/>
+      <WeatherTitle />
       <div className="flex flex-row space-x-1 justify-between items-center">
         <div className="flex flex-col space-y-1">
-          <p className="text-blue-500 text-md font-bold">NOW</p>
+          <p className="text-blue-500 text-md">NOW</p>
           <div className="flex flex-row space-x-1">
             <p className={"text-8xl self-center font-semibold " + nowTextColor}>
               {Math.trunc(props.temp)}
@@ -54,7 +55,7 @@ const TemperatureDetails = (props: {
           </div>
         </div>
         <div className="flex flex-col space-y-1 self-start">
-          <p className="text-slate-500 text-md self-end">WIND</p>
+          <p className="text-blue-500 text-md self-end">WIND</p>
           <div className="flex flex-row space-x-1 space-y-1">
             <p className="text-white text-4xl self-center">
               {Math.trunc(props.windSpeed)}
@@ -63,11 +64,25 @@ const TemperatureDetails = (props: {
               ms<sup>-1</sup>
             </p>
           </div>
+          <p className="text-blue-500 text-md self-end">RAIN</p>
+          <div className="flex flex-row space-x-1 space-y-1">
+            <p className="text-white text-4xl self-center">
+              {props.rain === null || props.rain === undefined
+                ? "-"
+                : Math.trunc(props.rain)}
+            </p>
+            {props.rain != null ||
+              (props.rain != undefined && (
+                <p className="text-white text-2xl self-start">
+                  ms<sup>-1</sup>
+                </p>
+              ))}
+          </div>
         </div>
       </div>
-      <WindRecommendation windSpeed={props.windSpeed}/>
+      <WindRecommendation windSpeed={props.windSpeed} />
       <div className="flex flex-row space-x-0 w-full items-start"></div>
-      <div className="flex flex-row justify-between">
+      {/* <div className="flex flex-row justify-between">
         <div className="flex flex-col">
           <p className="text-blue-500 text-xs">MIN</p>
           <div className={"flex flex-row space-x-1 text-md " + minTextColor}>
@@ -88,7 +103,7 @@ const TemperatureDetails = (props: {
           Min and Max are for current variations in temperature across the city
           only.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
