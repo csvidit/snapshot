@@ -4,47 +4,12 @@ import AQI from "./AQI";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherLoading from "./WeatherLoading";
-import { AQIObject, WeatherObject } from "./WeatherInterfaces";
+import { AQIObject, WeatherObject, Location } from "./WeatherInterfaces";
 
 const Weather = () => {
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState<Location>({latitude: 0, longitude: 0});
   const [weather, setWeather] = useState<WeatherObject>();
   const [aqi, setAqi] = useState<AQIObject>();
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(showPosition);
-  // } else {
-  //   console.log("Geolocation is not supported by this browser.");
-  // }
-
-  // function showPosition(position) {
-  //   console.log(
-  //     "Latitude: " +
-  //       position.coords.latitude +
-  //       "<br>Longitude: " +
-  //       position.coords.longitude
-  //   );
-  // }
-
-  const OWM_ApiUrl_TEST =
-    "https://api.openweathermap.org/data/2.5/weather?lat=22.5726723&lon=88.3638815&units=metric&appid=" +
-    process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
-  const OWM_ApiUrl_AQI =
-    "https://api.openweathermap.org/data/2.5/air_pollution?lat=22.5726723&lon=88.3638815&appid=" +
-    process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
-
-  const fetchTemp = () => {
-    return axios
-      .get(OWM_ApiUrl_TEST)
-      .then((response) => response)
-      .then((response) => setWeather(response.data));
-  };
-
-  const fetchAQI = () => {
-    return axios
-      .get(OWM_ApiUrl_AQI)
-      .then((response) => response)
-      .then((response) => setAqi(response.data));
-  };
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -54,7 +19,6 @@ const Weather = () => {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
           });
-          console.log(location);
         },
         (error) => {
           console.error(error);
@@ -63,9 +27,31 @@ const Weather = () => {
     } else {
       console.error("Geolocation is not supported by this browser.");
     }
-    fetchTemp();
-    fetchAQI();
-  }, []);
+
+    axios
+      .get(
+        "https://api.openweathermap.org/data/2.5/weather?lat=" +
+          location.latitude +
+          "&lon=" +
+          location.longitude +
+          "&units=metric&appid=" +
+          process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY
+      )
+      .then((response) => response)
+      .then((response) => setWeather(response.data));
+
+    axios
+      .get(
+        "https://api.openweathermap.org/data/2.5/air_pollution?lat=" +
+          location.latitude +
+          "&lon=" +
+          location.longitude +
+          "&appid=" +
+          process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY
+      )
+      .then((response) => response)
+      .then((response) => setAqi(response.data));
+  }, [location.latitude]);
 
   if (weather && aqi) {
     return (
