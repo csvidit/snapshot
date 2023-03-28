@@ -7,6 +7,7 @@ import Subtitle from "./Subtitle";
 import Title from "./Title";
 import Image from "next/image";
 import LandingPageContainer from "./LandingPageContainer";
+import LandingPageContent from "./LandingPageContent";
 
 const LandingPage = () => {
   
@@ -31,23 +32,7 @@ const LandingPage = () => {
 
   return (
     <LandingPageContainer>
-      <motion.div
-        className={mainContentStyles}
-        // style={{ opacity: 0, translateY: 800, scrollBehavior: "smooth"}}
-        // animate={{ opacity: 1, translateY: 0 }}
-        // transition={{
-        //   type: "spring",
-        //   staggerChildren: 1.5,
-        //   when: "beforeChildren",
-        //   duration: 1,
-        // }}
-        variants={opacityVariants}
-        animate="visible"
-        initial="hidden"
-        // variants={list}
-        // initial="hidden"
-        // animate="visible"
-      >
+      <LandingPageContent>
         <motion.div
           className="self-center"
           variants={opacityVariants}
@@ -89,7 +74,7 @@ const LandingPage = () => {
             <p>CURRENTLY IN <p className="inline text-red-400 text-xs">ALPHA</p> STAGE</p>
             <p>INVITE ONLY</p>
           </MoreInfo>
-      </motion.div>
+      </LandingPageContent>
     </LandingPageContainer>
   );
 };
