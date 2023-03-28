@@ -7,6 +7,7 @@ import Subtitle from "./Subtitle";
 import Title from "./Title";
 import Image from "next/image";
 import { landingPageContainerStyles, mainContentStyles } from "../MainStyles";
+import LandingPageContainer from "./LandingPageContainer";
 
 const LandingPage = () => {
   
@@ -30,7 +31,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className={landingPageContainerStyles}>
+    <LandingPageContainer>
       <motion.div
         className={mainContentStyles}
         // style={{ opacity: 0, translateY: 800, scrollBehavior: "smooth"}}
@@ -90,7 +91,7 @@ const LandingPage = () => {
             <p>INVITE ONLY</p>
           </MoreInfo>
       </motion.div>
-    </div>
+    </LandingPageContainer>
   );
 };
 

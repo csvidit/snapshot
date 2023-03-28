@@ -3,21 +3,21 @@ import Loading from "@/components/Loading";
 import React from "react";
 import Nav from "../HomePage/Nav";
 import SidePanel from "./SidePanel";
-import Container from "./Container";
-import ContentContainer from "../unused/ContentContainer";
+import ItemsContainer from "./ItemsContainer";
 import * as Space from "react-spaces";
-import Section from "./Section";
-import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
+import Section from "./Section";;
 import Input from "./Input";
 import { Dropdown } from "flowbite-react";
+import PreferencesPageContainer from "./PreferencesPageContainer";
+import PreferencesPageContent from "./PreferencesPageContent";
 
 const PreferencesPage = (props: { user: UserProfile }) => {
   return (
-    <div className={mainContainerStylesLeft}>
-      <div className={mainContentStylesLeft}>
+    <PreferencesPageContainer>
+      <PreferencesPageContent>
         <Nav user={props.user}></Nav>
         <div className="w-3/4"></div>
-        <Container>
+        <ItemsContainer>
           <div className="text-2xl lg:text-4xl text-amber-600 font-extralight">
             <p className="mt-3 mb-3 lg:mt-5 lg:mb-5">Preferences</p>
           </div>
@@ -47,9 +47,9 @@ const PreferencesPage = (props: { user: UserProfile }) => {
               </Section>
             </Space.Fill>
           </Space.Fixed>
-        </Container>
-      </div>
-    </div>
+        </ItemsContainer>
+      </PreferencesPageContent>
+    </PreferencesPageContainer>
   );
 };
 

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Button from "../LandingPage/Button";
 import Link from "next/link";
 import Nav from "./Nav";
-import { mainContainerStylesLeft, mainContentStylesLeft } from "../MainStyles";
 import Weather from "./Weather/Weather";
 import WeatherImage from "./Weather/WeatherImage";
 import TemperatureDetails from "./Weather/TemperatureDetails";
@@ -22,6 +21,9 @@ import { XYFrame } from "semiotic";
 import News from "./News/News";
 import Socials from "./Socials/Socials";
 import TodaysImage from "./TodaysImage";
+import HomePageContainer from "./HomePageContainer";
+import HomePageContent from "./HomePageContent";
+import HomePageGrid from "./HomePageGrid";
 
 const HomePage = (props: any) => {
   const data = [
@@ -34,17 +36,17 @@ const HomePage = (props: any) => {
   console.log(props.user);
 
   return (
-    <div className={mainContainerStylesLeft}>
-      <div className={mainContentStylesLeft}>
+    <HomePageContainer>
+      <HomePageContent>
         <Nav user={props.user}></Nav>
-        <div className="p-4 lg:p-12 grid grid-cols-1 lg:grid-cols-4 place-content-around">
+        <HomePageGrid>
           <TodaysImage/>
           <Weather/>
           <News></News>
           {/* <Socials></Socials> */}
-        </div>
-      </div>
-    </div>
+        </HomePageGrid>
+      </HomePageContent>
+    </HomePageContainer>
   );
 };
 

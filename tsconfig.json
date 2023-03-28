@@ -20,6 +20,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/LandingPage/MiniProfile.tsx", "src/components/HomePage/Weather/Weather.js", "src/components/HomePage/Socials/Socials.js", "src/components/HomePage/useTodaysImage.ts", "src/firebaseConfig.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/LandingPage/MiniProfile.tsx", "src/components/HomePage/Weather/Weather.tsx", "src/components/HomePage/Socials/Socials.js", "src/components/HomePage/useTodaysImage.ts", "src/firebaseConfig.js"],
   "exclude": ["node_modules"]
 }
