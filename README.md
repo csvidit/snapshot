@@ -7,7 +7,7 @@ Authentication through Auth0.
 
 This app is not available for public sign-ups (mostly due to very limited free API calls available) and is mostly supposed to be a proof of concept at the moment. If you would like to see it in action, please use these test credentials to log in and play around a bit. The user preferences section of the website is under development at the moment. 
 
-Twitter is in the process of deprecating its current API and its endpoint for getting Trends data is not available yet, so the 'Trending on Socials' feature's development will take longer.
+**Twitter API update, Apr 20, 2023**: Twitter's API v1 is deprecated, and their new API v2 does not yet have an endpoint for Trends. Implementing the trends functionality in snapshot is therefore not being considered anymore in the short-term. This functionality may be implemented using another social media platform, but that is a future enhancement and not a present concern.
 
 ## Tech Stack
 
