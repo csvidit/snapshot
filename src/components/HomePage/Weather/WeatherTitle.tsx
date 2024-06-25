@@ -1,11 +1,19 @@
 import { BsCloud } from "react-icons/bs";
+import EditWeatherDialog from "./EditWeatherDialog";
+import { motion } from "framer-motion";
 
-const WeatherTitle = (props: {city: string}) => {
+const primaryVariants = {
+  initial: {},
+  hover: {},
+}
+
+const WeatherTitle = (props: {city: string, setUnits: any}) => {
   return (
-    <div className="flex flex-row space-x-1 items-center clear-left text-blue-500 text-2xl">
+    <motion.div whileHover="hover" initial="initial" variants={primaryVariants} className="flex flex-row space-x-1 items-center clear-left text-blue-500">
       <BsCloud size="1.5em"></BsCloud>
       <p className="text-blue-500 text-2xl">{props.city}</p>
-    </div>
+      <EditWeatherDialog setUnits={props.setUnits}/>
+    </motion.div>
   );
 };
 

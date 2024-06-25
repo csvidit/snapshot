@@ -43,6 +43,9 @@ const HomePage = (props: any) => {
           <TodaysImage/>
           <Weather/>
           <News></News>
+          <div className="flex flex-col">
+            <p>{props.user.metadata}</p>
+          </div>
           {/* <Socials></Socials> */}
         </HomePageGrid>
       </HomePageContent>

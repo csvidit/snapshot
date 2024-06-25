@@ -10,6 +10,7 @@ const Weather = () => {
   const [location, setLocation] = useState<Location>({latitude: 0, longitude: 0, city: "Null Island"});
   const [weather, setWeather] = useState<WeatherObject>();
   const [aqi, setAqi] = useState<AQIObject>();
+  const [units, setUnits] = useState("metric");
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -24,11 +25,6 @@ const Weather = () => {
             city: response.data[0].name
             })
           })
-          // setLocation({
-          //   latitude: position.coords.latitude,
-          //   longitude: position.coords.longitude,
-
-          // });
         },
         (error) => {
           console.error(error);
@@ -44,7 +40,7 @@ const Weather = () => {
           location.latitude +
           "&lon=" +
           location.longitude +
-          "&units=metric&appid=" +
+          "&units="+units+"&appid=" +
           process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY
       )
       .then((response) => response)
@@ -61,7 +57,7 @@ const Weather = () => {
       )
       .then((response) => response)
       .then((response) => setAqi(response.data));
-  }, [location.latitude]);
+  }, [location.latitude, units]);
 
   if (weather && aqi) {
     return (
@@ -73,6 +69,7 @@ const Weather = () => {
           windSpeed={weather?.wind?.speed}
           rain={weather?.rain?.["1h"]}
           city={location.city}
+          setUnits={setUnits}
         />
         {aqi?.list?.map((x) => {
           return <AQI key={x?.main?.aqi} aqi={x?.main?.aqi}></AQI>;

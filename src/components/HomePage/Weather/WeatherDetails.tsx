@@ -21,6 +21,7 @@ const WeatherDetails = (props: {
   windSpeed: number;
   rain: number;
   city: string;
+  setUnits: any
 }) => {
   const tempColor = (temp: number) => {
     if (temp < 0) {
@@ -46,7 +47,7 @@ const WeatherDetails = (props: {
 
   return (
     <div className="flex flex-col space-y-1 rounded-xl w-64 font-light h-max col-span-1">
-      <WeatherTitle city={props.city} />
+      <WeatherTitle city={props.city} setUnits={props.setUnits}/>
       <div className="flex flex-row space-x-1 justify-between items-center">
         <div className="flex flex-col space-y-1">
           <p className="text-blue-500 text-md">TEMP. NOW</p>
